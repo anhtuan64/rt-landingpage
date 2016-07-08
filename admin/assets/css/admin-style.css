@@ -1,0 +1,6 @@
+.mce-i-rt_icon {
+	background: url(../images/rt-shortcodes.png) no-repeat center !important;
+}
+.widgets-php .widget-content select {
+	width: 95%;
+}

@@ -1,0 +1,24 @@
+/* RT Blog
+--------------------------------------------------- */
+.rt-blog-carousel-shortcode {
+	position: relative;
+	article {
+		.entry-title {
+			margin-top: 0;
+		}
+	}
+}
+.rt-blog-carousel-shortcode.style-blog-1 {
+	article.has-post-thumbnail {
+		.entry-thumb {
+			float: left;
+			width: 50%;
+			padding-right: 5px;
+		}
+		.entry-content {
+			float: left;
+			width: 50%;
+			padding-left: 5px;
+		}
+	}
+}

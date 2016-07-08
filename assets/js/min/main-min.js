@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){if(jQuery().flexslider&&jQuery(".woocommerce .images #carousel").length>=1){var e=100;jQuery("body.woocommerce .sidebar").is(":visible")?wooThumbWidth=100:wooThumbWidth=118}});

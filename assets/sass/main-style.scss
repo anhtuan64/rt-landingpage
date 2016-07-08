@@ -1,0 +1,503 @@
+/* Header
+--------------------------------------------------- */
+.fusion-header-wrapper {
+	z-index: 999;
+}
+
+/* Blog
+--------------------------------------------------- */
+/* Blog - Medium 1 */
+.blog-medium-1 #posts-container {
+	> div.fusion-post-medium {
+		width: 48%;
+		margin-right: 4%;
+		float: left; 
+		clear: none;
+		> .fusion-flexslider {
+			max-width: 45%;
+		}
+	}
+	> div.fusion-post-medium:nth-child(2n) {
+		margin-right: 0;
+	}
+}
+
+/* Shop Page
+--------------------------------------------------- */
+/* Hover Effect */
+.woo-thumb-hover-effect-hover-zoom .products .product {
+	.product-images {
+		overflow: hidden;
+	}
+	.product-images img {
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	&:hover .product-images img {
+		width: 110%;
+		-webkit-transition: scale(1.2);
+		-moz-transition: scale(1.2);
+		-o-transition: scale(1.2);
+		-ms-transition: scale(1.2);
+		transform: scale(1.2);
+	}
+}
+.woo-thumb-click-effect-popup {
+	.product-images {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 9;
+		width: 60px;
+		height: 60px;
+	}
+	.product-images.popup-gallery {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		z-index: 8;
+	}
+}
+
+/* Click Effect */
+.woo-thumb-click-effect-popup-gallery-zoom .products .product,
+.woo-thumb-click-effect-popup-gallery .products .product {
+	.product-images {
+		min-height: 0 !important;
+	}
+}
+
+/* Filter */
+.rt-filter-categories {
+	width: 100%;
+	clear: both;
+	display: inline-block;
+	margin-bottom: 0;
+	form > * {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	.rt-filter-search {
+		max-width: 200px;
+		height: 33px;
+	}
+	.gravity-select-parent {
+		min-width: 200px;
+	}
+	.rt-filter-submit {
+		margin: 0;
+		color: #fff;
+		border: 0;
+		border-radius: 2px;
+	}
+}
+
+/* Woocommerce Template: classic-1 */
+.woo-style-classic-1 .products {
+	> li .product-details {
+		.product-title {
+			text-align: center;
+		}
+		.price, .sku, .stock-status {
+			text-align: center;
+			display: block;
+			width: 100%;
+		}
+		.product-details-container {
+			padding-bottom: 0;
+		}
+		.entry-desc, .star-rating {
+			display: none;
+		}
+	}
+}
+/* Woocommerce Template: classic-2 */
+.woo-style-classic-2 .products {
+	> li .product-details {
+		.entry-desc, .star-rating {
+			display: none;
+		}
+		.product-title {
+			text-align: center;
+		}
+		.price {
+			text-align: center;
+			display: block;
+			width: 100%;
+		}
+	}
+	> li .product-buttons {
+		display: none;
+	}
+}
+/* Woocommerce Template: classic-3 */
+.woo-style-classic-3 .products {
+	> li .product-details {
+		.entry-desc {
+			display: none;
+		}
+		.product-title {
+			text-align: center;
+		}
+		.price {
+			text-align: center;
+			display: block;
+			width: 100%;
+		}
+	}
+	> li .product-buttons {
+		.add_to_cart_button {
+			display: none;
+		}
+		.star-rating {
+			float: left;
+		}
+	}
+}
+
+/* Single Product
+--------------------------------------------------- */
+/* Single Product - Thumbnail Design */
+.thumb-design-vertical .product {
+	.images {
+		width: 500px;
+		#carousel {
+			width: 100px;
+			float: right;
+			ul.slides > li {
+				float: none !important;
+				margin-bottom: 10px;
+				max-height: 120px;
+				overflow: hidden;
+				opacity: 1 !important;
+				width: 100px !important; 
+			}
+		}
+		#slider {
+			float: left;
+			width: 290px;
+		}
+	}
+	.summary.entry-summary {
+		margin-left: 530px;
+	}
+}
+
+.thumb-design-vertical.has-sidebar .product {
+	.images {
+		width: 420px;
+		#carousel {
+			width: 100px;
+		}
+		#slider {
+			float: left;
+			width: 290px;
+		}
+	}
+	.summary.entry-summary {
+		margin-left: 450px;
+	}
+}
+
+/* Widgets
+--------------------------------------------------- */
+/*.sidebar * {
+	max-width: 100%;
+}*/
+
+/* Black Studio TinyMCE */
+.widget_black_studio_tinymce > .textwidget iframe {
+	max-width: 100%;
+}
+
+/* Banner Ads
+--------------------------------------------------- */
+#main > .fusion-row, body {
+	position: relative;
+}
+#main > .fusion-row .rt-ads-left,
+#main > .fusion-row .rt-ads-right {
+	position: absolute;
+}
+
+/* Three Plugin
+--------------------------------------------------- */
+/* Left and Right Ads */
+#divAdLeft,
+#divAdRight {
+	z-index: 99;
+}
+
+/* Magnific Popup */
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+/* Owl Carousel */
+.owl-carousel {
+	overflow: hidden;
+	.owl-nav > div {
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.6);
+		border-radius: 4px;
+		width: 30px;
+		height: 60px;
+		font-size: 30px;
+		color: #fff;
+		line-height: 60px;
+		text-align: center;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	.owl-nav > div.owl-prev {
+		top: 50%;
+		left: -30px;
+		margin-top: -30px;
+	}
+	&:hover .owl-nav > div.owl-prev {
+		left: 0;
+	}
+	.owl-nav > div.owl-next {
+		right: -30px;
+		bottom: 50%;
+		margin-bottom: -30px;
+	}
+	&:hover .owl-nav > div.owl-next {
+		right: 0;
+	}
+}
+
+/* RCarousel Master */
+.rcarousel-master-parrent {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	> a {
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.6);
+		border-radius: 4px;
+		width: 60px;
+		height: 30px;
+		font-size: 30px;
+		color: #fff;
+		line-height: 30px;
+		text-align: center;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	> a#ui-carousel-next {
+		top: -30px;
+		left: 50%;
+		margin-left: -30px;
+	}
+	&:hover > a#ui-carousel-next {
+		top: 0;
+	}
+	> a#ui-carousel-prev {
+		bottom: -30px;
+		left: 50%;
+		margin-left: -30px;
+	}
+	&:hover > a#ui-carousel-prev {
+		bottom: 0;
+	}
+}
+
+/* Loading
+--------------------------------------------------- */
+@-webkit-keyframes uil-ring-anim {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes uil-ring-anim {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-moz-keyframes uil-ring-anim {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-ms-keyframes uil-ring-anim {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-moz-keyframes uil-ring-anim {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes uil-ring-anim {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-o-keyframes uil-ring-anim {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes uil-ring-anim {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+.loading {
+	background: none;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	transform: scale(0.1);
+	opacity: 0;
+	display: none;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.loading.enable {
+	opacity: 1;
+	display: inline-block;
+}
+.loading > div {
+	position: absolute;
+	display: block;
+	width: 160px;
+	height: 160px;
+	top: 20px;
+	left: 20px;
+	border-radius: 80px;
+	box-shadow: 0 6px 0 0 #cec9c9;
+	-ms-animation: uil-ring-anim 1s linear infinite;
+	-moz-animation: uil-ring-anim 1s linear infinite;
+	-webkit-animation: uil-ring-anim 1s linear infinite;
+	-o-animation: uil-ring-anim 1s linear infinite;
+	animation: uil-ring-anim 1s linear infinite;
+}
+
+
+
+
+
+
