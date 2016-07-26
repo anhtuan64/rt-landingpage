@@ -1,0 +1,91 @@
+/* Style 1
+--------------------------------------------------- */
+#main .widget.support-online-widget.style-1 .supporter-info {
+	padding-top: 150px;
+	background: url(../../images/bg-support.png) top center no-repeat,#4caf50;
+	background-size: contain;
+}
+#main .widget.support-online-widget.style-1 .supporter-info .supporter {
+	margin: 0 12px;
+}
+#main .widget.support-online-widget.style-1 .supporter-info .supporter .info .phone, #main .widget.support-online-widget.style-1 .supporter-info .supporter .online .skypeassets {
+	display: block;
+	padding: 6px 0 4px;
+	color: #fff;
+	font-family: Arial;
+	font-size: 21.23px;
+	font-weight: 600;
+	position: relative;
+	border-bottom: 1px solid #5cc160;
+}
+#main .widget.support-online-widget.style-1 .supporter-info .supporter .info .phone a, #main .widget.support-online-widget.style-1 .supporter-info .supporter .online .skypeassets a {
+	color: #fff;
+}
+#main .widget.support-online-widget.style-1 .supporter-info .supporter .info .phone:before, #main .widget.support-online-widget.style-1 .supporter-info .supporter .online .skypeassets:before{
+	content: "\f10b";
+	font: normal normal normal 23px/1 FontAwesome;
+	background: url(../../images/bg-icon-support.png) right no-repeat;
+	margin: 0 10px 0 5px;
+	height: 29px;
+	width: 29px;
+	display: inline-block;
+	line-height: 29px;
+}
+#main .widget.support-online-widget.style-1 .supporter-info .supporter .info .phone:nth-child(2):before {
+	content: "\f1ac";
+	font-size: 15px;
+}
+#main .widget.support-online-widget.style-1 .supporter-info .supporter .online .skypeassets {
+	font-size: 13px;
+	margin: 0;
+}
+#main .widget.support-online-widget.style-1 .supporter-info .supporter .online .skypeassets:before {
+	content: "\f003";
+	font-size: 15px;
+}
+#main .widget.support-online-widget.style-1 .supporter-info .supporter .online .skypeassets a {
+	display: inline-block;
+	font-size: 13px;
+	color: #fff;
+	font-family: Arial;
+	font-weight: 300;
+}
+
+/* Style 2
+--------------------------------------------------- */
+#main .widget.support-online-widget.style-2 {
+	background-image: url(../../images/bg-support-2.png);
+	background-position: top center;
+	background-repeat: repeat-x;
+	.widget-title {
+		background: #ffffff;
+		color: #cc2952;
+		font-weight: normal;
+		display: inline-block;
+		padding: 2px 5px;
+		margin-top: 65px;
+		float: right;
+		&:before {
+			display: none;
+		}
+	}
+	.supporter-info {
+		clear: both;
+		color: #fff;
+		padding: 10px;
+		.info, 
+		.online {
+			float: left;
+			width: 55%;
+			.phone {
+				font-size: 140%;
+			}
+		}
+		.online {
+			width: 43%;
+			margin-left: 2%;
+			text-align: right;
+		}
+	}
+}
+

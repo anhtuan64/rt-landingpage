@@ -18,6 +18,24 @@ if ( ! function_exists( 'rt_action_woocommerce_after_shop_loop_item_title' ) ) {
 	add_action( 'woocommerce_after_shop_loop_item_title', 'action_woocommerce_after_shop_loop_item_title', 10, 2 );
 }
 
+
+/**
+ *
+ * Hook header version 4
+ *
+ * @param    
+ * @return  
+ *
+ */
+// if ( ! function_exists( 'rt_hook_header_v4' ) ) {
+// 	add_action( 'avada_header_2', 'rt_hook_header_v4' );
+// 	function rt_hook_header_v4( $tabs ) {
+
+// 		echo 'xxx';
+
+// 	}
+// }
+
 /**
  *
  * Remove tab Attribute
@@ -36,6 +54,7 @@ if ( ! function_exists( 'woo_remove_product_tabs' ) ) {
 
 	}
 }
+
 /**
  *
  * add data Attribute 

@@ -12,7 +12,9 @@ if( ! function_exists( 'rt_of_options_array') )
 		$product_categories = get_terms( 'product_cat', array() );
 		if ( count( $product_categories ) > 0 ) {
 			foreach ( $product_categories as $key => $obj ) {
-				$arr_product_cat[$obj->slug] = $obj->name;
+				if ( ! empty( $obj->name ) ) {
+					$arr_product_cat[$obj->slug] = $obj->name;
+				}
 			}
 		}
 

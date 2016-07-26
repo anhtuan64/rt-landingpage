@@ -20,23 +20,24 @@
 						}
 					}
 				?>
-				<!-- Cart sticky -->
-				<div class="rt-cart-counter">
-					<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
-						<i class="fa fa-cart-plus" aria-hidden="true"></i>
-						<span class="counter"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-						<span class="text-price">
-							<span class="text"><?php _e( 'Cart', RT_LANGUAGE );?> <i class="fa fa-angle-down" aria-hidden="true"></i></span>
-							<?php if ( WC()->cart->get_cart_contents_count() > 0 ) :?>
-								<span class="total">( <?php echo WC()->cart->get_cart_total(); ?> )</span>
-							<?php endif;?>
-						</span>
-					</a>
-				</div>
-				
+				<?php if ( class_exists( 'WooCommerce' ) ) : ?>
+					<!-- Cart sticky -->
+					<div class="rt-cart-counter">
+						<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+							<i class="fa fa-cart-plus" aria-hidden="true"></i>
+							<span class="counter"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+							<span class="text-price">
+								<span class="text"><?php _e( 'Cart', RT_LANGUAGE );?> <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+								<?php if ( WC()->cart->get_cart_contents_count() > 0 ) :?>
+									<span class="total">( <?php echo WC()->cart->get_cart_total(); ?> )</span>
+								<?php endif;?>
+							</span>
+						</a>
+					</div>
+				<?php endif;?>
 				</div>  <!-- fusion-row -->
 			</div>  <!-- #main -->
-			<?php
+			<?php 
 				// Get Footer Page
 				if ( Avada()->settings->get( 'theme_setup_footer_page' ) ) {
 					$page = get_posts(
@@ -151,6 +152,27 @@
 				<?php
 			} // end is not blank page check
 			?>
+
+			<!-- Popup -->
+			<?php
+			$page_register_web_popup = get_page_by_path( 'register-web-popup' );
+			if ( $page_register_web_popup ) :
+				wp_enqueue_script( 'animateTransition' );
+				wp_enqueue_style( 'animateTransition-transitions' );
+			?>
+				<div class="transition-overlay"></div>
+				<div class="register-web-popup hide-opacity hide-display" data-block="in">
+					<div class="popup-wrapper">
+						<div class="popup-title">
+							<h3><?php echo get_the_title( $page_register_web_popup );?></h3>
+							<a class="popup-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+						</div>
+						<div class="popup-content">
+							<?php echo apply_filters( 'the_content', $page_register_web_popup->post_content );?>
+						</div>
+					</div>
+				</div>
+			<?php endif;?>
 		</div> <!-- wrapper -->
 
 		<?php

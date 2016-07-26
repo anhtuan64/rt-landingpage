@@ -22,11 +22,16 @@ class Gtid_Support_Online extends WP_Widget {
 		extract($args);
 		$instance = wp_parse_args( (array)$instance, array(
 			'title' 				=> '',
+			'support_style'			=> '',
 			'number_supporter' 		=> 1,
 			'tel' 					=> '',
 			'hotline' 				=> '',
 			'email' 				=> '',
 		) );
+
+		wp_enqueue_style( 'rt-support' );
+
+		$before_widget = str_replace( 'class="', 'class="style-'. $instance['support_style'] .' ', $before_widget );
 
 		echo $before_widget;
 		if ( ! empty( $instance['title'] ) ) {
@@ -79,6 +84,7 @@ class Gtid_Support_Online extends WP_Widget {
 	function form( $instance ) {
 		$instance = wp_parse_args( ( array ) $instance, array(
 			'title' 				=> '',
+			'support_style'			=> '',
 			'number_supporter' 		=> 1,
 			'tel' 					=> '',
 			'hotline' 				=> '',
@@ -90,6 +96,13 @@ class Gtid_Support_Online extends WP_Widget {
 		<input type="text" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" style="width:95%;" /></p>
 
 		<hr />
+
+		<p><label for="<?php echo $this->get_field_id('support_style'); ?>"><?php _e('Support Style', RT_LANGUAGE ); ?>:</label>
+			<select id="<?php echo $this->get_field_id('support_style'); ?>" name="<?php echo $this->get_field_name('support_style'); ?>">
+				<option value="1" <?php selected( $instance['support_style'], '1' ); ?>><?php _e( 'Style 1', RT_LANGUAGE );?></option>
+				<option value="2" <?php selected( $instance['support_style'], '2' ); ?>><?php _e( 'Style 2', RT_LANGUAGE );?></option>
+			</select>
+		</p>
 
 		<p><label for="<?php echo $this->get_field_id('number_supporter'); ?>"><?php _e('Number of supporter', RT_LANGUAGE ); ?>:</label>
 		<input type="text" id="<?php echo $this->get_field_id('number_supporter'); ?>" name="<?php echo $this->get_field_name('number_supporter'); ?>" value="<?php echo esc_attr( $instance['number_supporter'] ); ?>" style="width:20%;" />

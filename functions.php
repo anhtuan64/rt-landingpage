@@ -60,6 +60,13 @@ function theme_enqueue_styles() {
 	// Enqueue Avada Style
 	wp_enqueue_style( 'avada-parent-stylesheet', get_template_directory_uri() . '/style.css' );
 
+	/*----------- Widgets -----------*/
+	wp_register_style( 'rt-support', RT_THEME_URL . 'assets/css/widgets/rt-support.css' );
+
+	/*----------- Animate Popup -----------*/
+	wp_register_script( 'animateTransition', RT_THEME_URL . 'assets/third-party/animate-popup/js/animateTransition.min.js', array(), '1.0', true );
+	wp_register_style( 'animateTransition-transitions', RT_THEME_URL . 'assets/third-party/animate-popup/css/transitions.css' );
+
 	/*----------- RCarousel Master -----------*/
 	wp_register_style( 'rcarousel-master-rcarousel', RT_THEME_URL . 'assets/third-party/rcarousel-master/css/rcarousel.css' );
 	wp_register_script( 'rcarousel-master-ui-core', RT_THEME_URL . 'assets/third-party/rcarousel-master/js/jquery.ui.core.js', array(), '1.0', true );

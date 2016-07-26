@@ -1,0 +1,47 @@
+/* Widgets
+--------------------------------------------------- */
+/* widget - support */
+/* line 5, ../../sass/widgets/widgets.scss */
+.supporter-info {
+  padding-top: 92px;
+  background: url(../images/bg-support.png) top center no-repeat;
+  margin-top: 5px;
+}
+
+/* line 10, ../../sass/widgets/widgets.scss */
+.supporter {
+  text-align: center;
+  font-weight: bold;
+  padding: 6px 0px;
+}
+
+/* line 15, ../../sass/widgets/widgets.scss */
+.online {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* line 19, ../../sass/widgets/widgets.scss */
+.yahoo a, .skype a {
+  line-height: 0;
+  display: block;
+}
+
+/* line 23, ../../sass/widgets/widgets.scss */
+.yahoo, .skype {
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+/* line 27, ../../sass/widgets/widgets.scss */
+.skype img {
+  height: 16px;
+  width: auto;
+}
+
+/* line 31, ../../sass/widgets/widgets.scss */
+.phone {
+  color: #F00;
+  font-weight: bold;
+  display: block;
+}

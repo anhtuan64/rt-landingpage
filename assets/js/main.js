@@ -168,22 +168,44 @@
 			obj.stickyfloat({ duration: 400, cssTransition: csstransition, easing: easing });
 		}
 
+		/*  [ Popup ]
+		- - - - - - - - - - - - - - - - - - - - */
+		$('.topcoat-button--cta').click(function(){
+			var container = '#wrapper',
+				popup = '.register-web-popup[data-block="in"]',
+				animation = 'bounce-in',
+				customOverlay = document.querySelector('.transition-overlay');
 
-		// if ( $('.rt-cart-counter').length ) {
-		// 	var obj = $('.rt-cart-counter'),
-		// 		// csstransition = obj.attr('data-csstransition') == 'true' ? true : false,
-		// 		csstransition = false;
-		// 		easing = obj.attr('data-easing');
+			AnimateTransition({
+				container: container,
+				blockIn: popup,
+				animation: animation,
+				beforeTransition: function (blockIn, blockOut, container) {
+					$(popup).removeClass('hide-display');
+				},
+				onTransitionStart: function (blockIn, blockOut, container, event) {
+					customOverlay.style.display = 'block';
+				},
+				onTransitionEnd: function (blockIn, blockOut, container, event) {
+					$(popup).removeClass('hide-opacity');
+				}
+			});
+		});
+		$('.popup-close').click(function(){
+			var popup = '.register-web-popup[data-block="in"]',
+				customOverlay = document.querySelector('.transition-overlay');
 
-		// 	obj.stickyfloat({ duration: 400, cssTransition: csstransition, easing: easing });
-		// }
+			customOverlay.style.display = 'none';
+			$(popup).addClass('hide-opacity');
+			$(popup).addClass('hide-display');
+		});
 
 		/*  [ Plugin RT - Brand Dropdown Menu Link Conect]
 		- - - - - - - - - - - - - - - - - - - - */
 		if ( $('.widget-content-link').length ) {
 			$('.widget-content-link select').change(function() {
 				var url = $(this).val();
-			    if(url.length) window.open(url);
+				if(url.length) window.open(url);
 			});
 		}
 
