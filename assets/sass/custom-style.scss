@@ -259,7 +259,7 @@ p {
 	background-color: #fff;
 	position: fixed;
 	left: 50%;
-	top: 20%;
+	top: 88px;
 	width: 100%;
 	max-width: 900px;
 	margin-left: -450px;
@@ -353,7 +353,8 @@ p {
 					padding-right: 15px;
 					border-radius: 0;
 					color: #fff;
-					float: right;
+					right: -2px;
+					height: 100%;
 				}
 				img {
 					display: none;
