@@ -3,6 +3,22 @@
 
 	$(document).ready(function() {
 
+		/*  [ Page scroll animation ]
+		- - - - - - - - - - - - - - - - - - - - */
+		$('a.page-scroll').bind('click', function(event) {
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1500, 'easeInOutExpo');
+			event.preventDefault();
+		});
+		$('li.page-scroll a').bind('click', function(event) {
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1500, 'easeInOutExpo');
+			event.preventDefault();
+		});
 
 		/*  [ magnific-popup ]
 		- - - - - - - - - - - - - - - - - - - - */

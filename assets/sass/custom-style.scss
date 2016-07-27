@@ -37,6 +37,7 @@ p {
 					padding: 0 20px;
 					background-color: #00afec;
 					border-radius: 3px;
+					color: #fff;
 				}
 				&:hover a {
 					color: #333;
@@ -326,7 +327,9 @@ p {
 				background: #D4D4D4 !important;
 				color: #222;
 			}
-
+			.wpcf7-response-output {
+				display: none !important;
+			}
 			.button-submit {
 				overflow: hidden;
 				float: right;
