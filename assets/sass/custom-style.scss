@@ -299,6 +299,9 @@ p {
 				font-weight: 400;
 			}
 		}
+		.wpcf7-response-output {
+			display: none !important;
+		}
 		.form-dk {
 			padding: 6px 18px 20px;
 			background: #f4f4f4;
@@ -326,9 +329,6 @@ p {
 			.wpcf7-form-control-wrap .wpcf7-select-parent .select-arrow {
 				background: #D4D4D4 !important;
 				color: #222;
-			}
-			.wpcf7-response-output {
-				display: none !important;
 			}
 			.button-submit {
 				overflow: hidden;
@@ -360,7 +360,7 @@ p {
 					height: 100%;
 				}
 				img {
-					display: none;
+					float: left;
 				}
 				&:hover {
 					i , input[type=submit] {

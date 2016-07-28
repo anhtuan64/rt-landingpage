@@ -2,7 +2,7 @@
 @media all and (max-width: 1100px) {
 	/* Footer
 	--------------------------------------------------- */
-	#before-footer {
+	.before-footer {
 		.fusion-one-fifth {
 			.fusion-imageframe {
 				margin-bottom: -150px;
@@ -46,6 +46,15 @@
 
 	/* Header
 	--------------------------------------------------- */
+	.fusion-header-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		.fusion-mobile-nav-holder {
+			padding-top: 0 !important;
+		}
+	}
 	.fusion-header-wrapper,
 	.fusion-header-wrapper.fusion-is-sticky {
 		.fusion-header {
@@ -70,7 +79,7 @@
 
 	/* Footer
 	--------------------------------------------------- */
-	#before-footer {
+	.before-footer {
 		.fusion-one-fifth {
 			.fusion-imageframe {
 				margin-bottom: -100px;
@@ -104,6 +113,9 @@
 
 	/* Layout
 	--------------------------------------------------- */
+	#main {
+		margin-top: 30px;
+	}
 	div.fusion-column-wrapper {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
@@ -135,7 +147,7 @@
 
 	/* Footer
 	--------------------------------------------------- */
-	#before-footer {
+	.before-footer {
 		.fusion-one-fifth {
 			display: none;
 		}
@@ -147,6 +159,11 @@
 			.wpcf7 {
 				input[type=email] {
 					text-align: left !important;
+				}
+			}
+			.fusion-button-wrapper {
+				.button-large {
+					font-size: 30px;
 				}
 			}
 		}
@@ -166,9 +183,32 @@
 			}
 		}
 	}
+	// Image frame
+	.fusion-imageframe {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	/* Popup
+	--------------------------------------------------- */
+	.register-web-popup {
+		margin-left: 0;
+		left: 0;
+		top: 0;
+		overflow: scroll;
+		height: 100%;
+		.popup-title h3 {
+			margin-right: 50px;
+		}
+	}
 }
 @media all and (max-width: 600px) {
-
+	/* Shortcodes
+	--------------------------------------------------- */
+	// Button
+	#wrapper .fusion-button.button-xlarge.button-pill {
+		font-size: 20px;
+	}
 	
 }
 @media all and (max-width: 420px) {
